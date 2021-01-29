@@ -1,0 +1,3 @@
+include ':MyFirstButton'
+include ':app'
+rootProject.name = "TesteModules"
