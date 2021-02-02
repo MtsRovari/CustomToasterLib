@@ -8,6 +8,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import static com.mateusrovari.myfirstbutton.MainActivityModule.ARG_BACK;
+
 public class SecondActivityModule extends AppCompatActivity {
 
     private Button btnSecond;
@@ -24,12 +26,18 @@ public class SecondActivityModule extends AppCompatActivity {
             public void onClick(View view) {
                 //back to main activity from another project
 
-                Intent i = new Intent();
-                setResult(RESULT_OK, i);
-                finish();
+                onBackPressed();
             }
         });
 
         Toast.makeText(this, "supp second activity", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent i = new Intent(SecondActivityModule.this, MainActivityModule.class);
+        i.putExtra(ARG_BACK, true);
+        finish();
     }
 }
