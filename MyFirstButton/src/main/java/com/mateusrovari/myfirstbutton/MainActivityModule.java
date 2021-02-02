@@ -22,7 +22,6 @@ public class MainActivityModule extends AppCompatActivity {
 
         btnFirst = findViewById(R.id.btn_first);
         btnBack = findViewById(R.id.btn_back);
-        isBackFlow = getIntent().getBooleanExtra(ARG_BACK, false);
 
         btnFirst.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,12 +39,19 @@ public class MainActivityModule extends AppCompatActivity {
             }
         });
 
+        Toast.makeText(this, "supp main everybody", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        isBackFlow = getIntent().getBooleanExtra(ARG_BACK, false);
+
         if (isBackFlow) {
             Intent i = new Intent();
             setResult(RESULT_OK, i);
             finish();
         }
-
-        Toast.makeText(this, "supp main everybody", Toast.LENGTH_SHORT).show();
     }
 }
