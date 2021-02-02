@@ -2,7 +2,11 @@
     package="com.mateusrovari.myfirstbutton">
 
     <application>
-        <activity android:name=".MainActivityModule"
+        <activity
+            android:name=".MainActivityModule"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".SecondActivityModule"
             android:screenOrientation="portrait"/>
     </application>
 
