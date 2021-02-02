@@ -39,7 +39,7 @@ public class MainActivityModule extends AppCompatActivity {
             }
         });
 
-        Toast.makeText(this, "supp main everybody", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "main", Toast.LENGTH_SHORT).show();
     }
 
     @Override

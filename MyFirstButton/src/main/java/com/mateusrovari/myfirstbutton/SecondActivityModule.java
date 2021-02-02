@@ -30,7 +30,7 @@ public class SecondActivityModule extends AppCompatActivity {
             }
         });
 
-        Toast.makeText(this, "supp second activity", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "second activity", Toast.LENGTH_SHORT).show();
     }
 
     @Override
